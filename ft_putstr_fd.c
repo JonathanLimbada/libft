@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:15:47 by event             #+#    #+#             */
-/*   Updated: 2019/05/16 16:18:05 by event            ###   ########.fr       */
+/*   Updated: 2019/05/18 11:23:19 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char const *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putchar_fd(s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
