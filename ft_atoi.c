@@ -6,13 +6,13 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:04:44 by event             #+#    #+#             */
-/*   Updated: 2019/05/18 11:00:38 by event            ###   ########.fr       */
+/*   Updated: 2019/05/20 08:35:29 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *str);
+int	ft_atoi(const char *str);
 {
 	int	negative;
 	int	result;
