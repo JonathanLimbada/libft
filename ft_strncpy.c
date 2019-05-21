@@ -6,16 +6,16 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:05:18 by event             #+#    #+#             */
-/*   Updated: 2019/05/20 14:53:24 by event            ###   ########.fr       */
+/*   Updated: 2019/05/21 14:23:14 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int	i;
-	int	e;
+	size_t	i;
+	size_t	e;
 
 	i = 0;
 	e = ft_strlen(dst);

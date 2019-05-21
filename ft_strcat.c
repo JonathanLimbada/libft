@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:36:47 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/21 08:50:27 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:56:21 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2)
 		i++;
 		j++;
 	}
-	s1[i] + 1 = '\0';
+	s1[i] = '\0';
 	return (s1);
 }

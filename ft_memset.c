@@ -6,13 +6,13 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:32:13 by event             #+#    #+#             */
-/*   Updated: 2019/05/20 11:27:12 by event            ###   ########.fr       */
+/*   Updated: 2019/05/21 12:29:11 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*ptr;
 	size_t	i;

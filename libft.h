@@ -2,8 +2,9 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
-typedef strcut		s_list
+typedef struct		s_list
 {
 	void	*content;
 	size_t	content_size;
@@ -26,12 +27,14 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr(int n);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putstr(char const *s);
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
 void	ft_strclr(char *s);
 int	ft_strcmp(const char *s1, const char *s2);
-char	ft_strcpy(char *dst, const char *src);
+char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strdup(const char *s1);
 int	ft_strequ(char const *s1, char const *s2);
 int	ft_strlen(char *str);
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 int	ft_tolower(int c);

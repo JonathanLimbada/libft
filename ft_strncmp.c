@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:01:06 by event             #+#    #+#             */
-/*   Updated: 2019/05/20 15:24:22 by event            ###   ########.fr       */
+/*   Updated: 2019/05/21 15:39:24 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s1 == s2 && i < n && s1[i] != '\0' && s2[i] != '\0')
 	{
 		i++;
 	}
-	return (s1 - s2)
+	return (s1 - s2);
 }

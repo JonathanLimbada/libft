@@ -6,19 +6,19 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:04:44 by event             #+#    #+#             */
-/*   Updated: 2019/05/20 08:35:29 by event            ###   ########.fr       */
+/*   Updated: 2019/05/21 14:05:54 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str);
+int	ft_atoi(const char *str)
 {
 	int	negative;
-	int	result;
+	int	res;
 
 	negative = 1;
-	result = 0;
+	res = 0;
 	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' ||
 			*str == '\v' || *str == '\f' || *str == '\r'))
 		++str;
