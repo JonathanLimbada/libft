@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 11:27:35 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/22 15:28:41 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/22 14:23:50 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/22 15:41:44 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_memcpy(void	*dst, const void *src, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < dstsize)
+	while (n  > sizeof(src[i]))
 	{
-		dst[i] = src[j];
+		dst[i] = src[i];
+		n = n - sizeof(src[i]);
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	return (i);
+	return (dst);
 }
