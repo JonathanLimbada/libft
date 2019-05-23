@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:19:28 by event             #+#    #+#             */
-/*   Updated: 2019/05/21 14:39:12 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/20 12:19:28 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/23 16:22:09 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	int i;
 	char *prt;
