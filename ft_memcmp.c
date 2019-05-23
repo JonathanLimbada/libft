@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:23:50 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/23 13:57:22 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/23 13:56:31 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/23 14:40:16 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void	*dst, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
-	unsigned char *pdst;
-	unsigned char *psrc;
+	size_t	i;
+	unsigned char *ps1;
+	unsigned char *ps2;
 
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
 	i = 0;
-	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
-
-	while (n  > sizeof(src[i]))
+	while (n > 0)
 	{
-		pdst[i] = psrc[i];
-		n = n - sizeof(psrc[i]);
-		i++;
+		if (ps1[i] != ps2[i])
+			return (ps1[i] - ps2[i]);
+		if (ps1[i] == ps2[i])
+			i++;
+		n--;
 	}
-	return (dst);
+	return (0);
 }
-
