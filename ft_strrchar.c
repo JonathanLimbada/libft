@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 08:00:01 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/23 08:20:43 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/28 09:24:49 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s != '\0')
+	while (s[i] != '\0')
 		i++;
 	while (i >= 0)
 	{

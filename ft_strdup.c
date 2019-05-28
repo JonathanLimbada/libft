@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:19:28 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/23 16:44:55 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/28 09:33:11 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char	*ft_strdup(const char *s1)
 	i = 0;
 	while (s1[i])
 		i++;
-	prt = (char *)malloc(i * sizeof(char));
+	prt = (char *)malloc(i + 1 * sizeof(char));
+	if (prt == '\0')
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{

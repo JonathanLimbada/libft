@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:32:13 by event             #+#    #+#             */
-/*   Updated: 2019/05/23 11:30:31 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/28 09:18:45 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	ptr = b;
 	i = 0;
 	while (i < len)
+	{
 		ptr[i] = c;
 		i++;
+	}
 	return (b);
 }
