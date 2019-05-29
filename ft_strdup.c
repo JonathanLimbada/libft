@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:19:28 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/28 09:33:11 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/29 10:10:17 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int i;
-	char *prt;
+	int		i;
+	char	*prt;
 
 	i = 0;
 	while (s1[i])
