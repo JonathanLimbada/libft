@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:13:53 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 13:35:53 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/29 13:38:01 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/29 13:43:44 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	*ft_memalloc(size_t size)
 {
-	long	e;
+	void	*pt;
 
-	e = (long)n;
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		e = e * -1;
-	}
-	if (e >= 10)
-	{
-		ft_putnbr_fd(e / 10, fd);
-		ft_putchar_fd(e % 10 + '0', fd);
-	}
+	pt = malloc(size);
+	if (pt == NULL)
+		return (NULL);
 	else
-		ft_putchar_fd(e + '0', fd);
+		ft_memset(pt, '\0', size);
+	return (pt);
 }

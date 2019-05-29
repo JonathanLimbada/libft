@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:13:53 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 13:35:53 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/29 15:09:32 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/29 15:13:47 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_strdel(char **as)
 {
-	long	e;
-
-	e = (long)n;
-	if (n < 0)
+	if (as != NULL)
 	{
-		ft_putchar_fd('-', fd);
-		e = e * -1;
+		free(*as);
+		*as = NULL;
 	}
-	if (e >= 10)
-	{
-		ft_putnbr_fd(e / 10, fd);
-		ft_putchar_fd(e % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(e + '0', fd);
 }

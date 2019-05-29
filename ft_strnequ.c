@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:13:53 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 13:35:53 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/29 15:27:39 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/29 15:55:21 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	long	e;
+	size_t	i;
 
-	e = (long)n;
-	if (n < 0)
+	if (n == 0)
+		return (1);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	i = 0;
+	while (s1[i] && s2[i] && i < n - 1)
 	{
-		ft_putchar_fd('-', fd);
-		e = e * -1;
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
-	if (e >= 10)
-	{
-		ft_putnbr_fd(e / 10, fd);
-		ft_putchar_fd(e % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(e + '0', fd);
+	if (s1[i] != s2[i])
+		return (0);
+	return (1);
 }

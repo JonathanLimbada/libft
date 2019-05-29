@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:25:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/21 16:28:29 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/05/29 13:35:59 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void	ft_putnbr(int n)
 {
+	long	e;
+
+	e = (long)n;
 	if (n < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-n);
+		e = e * -1;
 	}
-	else if (n >= 10)
+	if (e >= 10)
 	{
-		ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
+		ft_putnbr(e / 10);
+		ft_putchar(e % 10 + '0');
 	}
 	else
-		ft_putchar(n + '0');
+		ft_putchar(e + '0');
 }

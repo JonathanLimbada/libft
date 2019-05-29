@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:13:53 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 13:35:53 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/29 13:57:59 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/29 15:07:54 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strnew(size_t size)
 {
-	long	e;
+	char	*pr;
+	size_t	i;
 
-	e = (long)n;
-	if (n < 0)
+	pr = (char *)malloc(sizeof(size + 1));
+	i = 0;
+	while (i <= size)
 	{
-		ft_putchar_fd('-', fd);
-		e = e * -1;
+		pr[i] = '\0';
+		i++;
 	}
-	if (e >= 10)
-	{
-		ft_putnbr_fd(e / 10, fd);
-		ft_putchar_fd(e % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(e + '0', fd);
+	pr[i] = '\0';
+	return (pr);
 }
