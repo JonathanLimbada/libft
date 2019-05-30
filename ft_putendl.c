@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:01:25 by event             #+#    #+#             */
-/*   Updated: 2019/05/18 12:31:44 by event            ###   ########.fr       */
+/*   Updated: 2019/05/30 10:26:03 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s != NULL)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }
