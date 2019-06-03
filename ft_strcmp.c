@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 15:50:54 by event             #+#    #+#             */
-/*   Updated: 2019/05/29 16:58:52 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/03 17:11:42 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char a1;
-	unsigned char a2;
+	char a1;
+	char a2;
 
 	a1 = *s1;
 	a2 = *s2;

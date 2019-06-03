@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 12:48:25 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/31 09:57:45 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/30 11:56:07 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/06/03 09:33:38 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		end;
 	char	*new;
-	int		z;
+	int		i;
+	int		j;
+	int		lenz;
 
 	i = 0;
-	if (s == NULL)
+	j = 0;
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	end = ft_strlen((char *)s);
-	while (s[i] == '\n' || s[i] == '\t' || s[i] == ' ')
-		i++;
-	if (s[i] == '\0')
-		return ("");
-	while (s[end - 1] == '\n' || s[end - 1] == '\t' || s[end - 1] == ' ')
-		end--;
-	z = end - i;
-	if (!(new = (char *)malloc(z + 1 * sizeof(char))))
+	lenz = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	if (!(new = (char *)malloc(sizeof(char) * lenz)))
 		return (NULL);
-	z = 0;
-	while (i < end)
+	while (s1[i])
 	{
-		new[z++] = s[i++];
+		new[i] = s1[i];
+		i++;
 	}
-	new[z] = '\0';
+	while (s2[j] != '\0')
+		new[i++] = s2[j++];
+	new[i] = '\0';
 	return (new);
 }

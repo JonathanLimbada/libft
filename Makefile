@@ -6,20 +6,20 @@
 #    By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:54:42 by jlimbada          #+#    #+#              #
-#    Updated: 2019/05/23 15:35:30 by jlimbada         ###   ########.fr        #
+#    Updated: 2019/06/03 16:31:33 by jlimbada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAG = -Wall -Werror -Wextra
 OBJECT = *.o
-SOURCE = *.c
+SRC = *.c 
 OPTIONS = -c -I.
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTIONS) $(SOURCE)
+	gcc $(FLAG) $(OPTIONS) $(SRC)
 	ar rc $(NAME) $(OBJECT)
 	ranlib $(NAME)
 
@@ -31,7 +31,7 @@ so:
 clean:
 	/bin/rm -f $(OBJECT)
 
-fclean:
+fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all

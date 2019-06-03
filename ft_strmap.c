@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 12:48:25 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/31 09:57:45 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/30 10:37:33 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/30 16:59:43 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	int		i;
-	int		end;
-	char	*new;
-	int		z;
+	char	*str;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	end = ft_strlen((char *)s);
-	while (s[i] == '\n' || s[i] == '\t' || s[i] == ' ')
-		i++;
-	if (s[i] == '\0')
-		return ("");
-	while (s[end - 1] == '\n' || s[end - 1] == '\t' || s[end - 1] == ' ')
-		end--;
-	z = end - i;
-	if (!(new = (char *)malloc(z + 1 * sizeof(char))))
+	str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (str == NULL)
 		return (NULL);
-	z = 0;
-	while (i < end)
+	while (s[i] != '\0')
 	{
-		new[z++] = s[i++];
+		str[i] = (*f)(s[i]);
+		i++;
 	}
-	new[z] = '\0';
-	return (new);
+	str[i] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:40:11 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/30 13:03:02 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/03 08:22:29 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # define INTMAX 2147483647
 # define INTMIN -2147483647
+# define MININT "-2147483648"
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -27,11 +28,13 @@ typedef struct	s_list
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
+int				ft_intlen(int n);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
+char			*ft_itoa(int n);
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -71,6 +74,7 @@ char			*ft_strnew(size_t size);
 char			*ft_strnstr(const char *haystack, const char *needle,
 									size_t len);
 char			*ft_strrchr(const char *s, int c);
+char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);

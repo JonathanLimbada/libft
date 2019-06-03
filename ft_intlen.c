@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:01:06 by event             #+#    #+#             */
-/*   Updated: 2019/06/03 17:13:18 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/05/31 08:40:31 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/05/31 08:45:38 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_intlen(int n)
 {
-	char a1;
-	char a2;
+	int	c;
 
-	a1 = *s1;
-	a2 = *s2;
-	if (n == 0)
-		return (0);
-	while (a1 == a2 && n)
+	c = 0;
+	if (n == INTMIN)
+		return (11);
+	if (n == 0)\
+		return (1);
+	if (n < 0)
 	{
-		a1 = *s1++;
-		a2 = *s2++;
-		if (a1 == '\0')
-			return (a1 - a2);
-		n--;
+		n = n * -1;
+		c++;
 	}
-	return (a1 - a2);
+	while (n >= 10)
+	{
+		c++;
+		n = n / 10;
+	}
+	if (n >= 0)
+		c++;
+	return (c);
 }
