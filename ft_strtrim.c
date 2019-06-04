@@ -6,37 +6,46 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:48:25 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/31 09:57:45 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/04 13:21:28 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int	is_white_space(char const *s)
 {
-	int		i;
-	int		end;
-	char	*new;
-	int		z;
+	int		j;
 
-	i = 0;
+	j = 0;
+	while (s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+		j++;
+	return (j);
+}
+
+char		*ft_strtrim(char const *s)
+{
+	char	*str;
+	int		i;
+	int		n;
+	int		slen;
+
 	if (s == NULL)
 		return (NULL);
-	end = ft_strlen((char *)s);
-	while (s[i] == '\n' || s[i] == '\t' || s[i] == ' ')
-		i++;
+	if (ft_strlen((char *)s) == 0)
+		return ((char*)s);
+	i = is_white_space(s);
+	n = 0;
+	slen = ft_strlen((char *)s) - 1;
 	if (s[i] == '\0')
-		return ("");
-	while (s[end - 1] == '\n' || s[end - 1] == '\t' || s[end - 1] == ' ')
-		end--;
-	z = end - i;
-	if (!(new = (char *)malloc(z + 1 * sizeof(char))))
+		return (ft_strdup(""));
+	while (s[slen] == '\t' || s[slen] == '\n' || s[slen] == ' ')
+		slen--;
+	if (slen < 0)
+		slen = 0;
+	if (!(str = (char *)malloc(sizeof(char) * (slen - i) + 2)))
 		return (NULL);
-	z = 0;
-	while (i < end)
-	{
-		new[z++] = s[i++];
-	}
-	new[z] = '\0';
-	return (new);
+	while (i <= slen)
+		str[n++] = s[i++];
+	str[n] = '\0';
+	return (str);
 }

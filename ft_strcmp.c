@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 15:50:54 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 09:33:59 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/04 12:55:40 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char a1;
-	unsigned char a2;
+	int	i;
 
-	a1 = *s1;
-	a2 = *s2;
-	while (a1 == a2)
+	i = 0;
+	while ((s1[i] != '\0') || (s2[i] != '\0'))
 	{
-		a1 = *s1++;
-		a2 = *s2++;
-		if (a1 == '\0')
-			return (a1 - a2);
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
+			return (1);
+		if ((unsigned char)s1[i] < (unsigned char)s2[i])
+			return (-1);
+		i++;
 	}
-	return (a1 - a2);
+	return (0);
 }
