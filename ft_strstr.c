@@ -17,7 +17,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int	j;
 
 	j = 0;
-	if (ft_strlen((char *)needle) == 0)
+	if ((int)ft_strlen((char *)needle) == 0)
 		return ((char *)haystack);
 	while (*haystack)
 	{
@@ -29,7 +29,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 					break ;
 				else
 					j++;
-				if (j == ft_strlen((char *)needle))
+				if (j == (int)ft_strlen((char *)needle))
 					return ((char *)haystack);
 			}
 			j = 0;

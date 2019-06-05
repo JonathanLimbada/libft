@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 11:22:31 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/30 17:04:39 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/06/05 13:58:11 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/06/05 14:07:58 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	int		i;
-	char	*str;
+	t_list	*new_list;
+	t_list	*nl_head;
 
-	i = 0;
-	if (s == NULL)
+	if (lst == NULL || f == NULL)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * ((int)ft_strlen((char *)s) + 1));
-	if (str == NULL)
+	if (!(new_list = ft_lstnew(NULL, 0)))
 		return (NULL);
-	while (s[i] != '\0')
+	new_list = f(lst);
+	nl_head = new_list;
+	while (lst->next != NULL)
 	{
-		str[i] = (*f)(i, s[i]);
-		i++;
+		lst = lst->next;
+		new_list->next = f(lst);
+		new_list = new_list->next;
 	}
-	str[i] = '\0';
-	return (str);
+	return (nl_head);
 }

@@ -31,11 +31,11 @@ char		*ft_strtrim(char const *s)
 
 	if (s == NULL)
 		return (NULL);
-	if (ft_strlen((char *)s) == 0)
+	if ((int)ft_strlen((char *)s) == 0)
 		return ((char*)s);
 	i = is_white_space(s);
 	n = 0;
-	slen = ft_strlen((char *)s) - 1;
+	slen = (int)ft_strlen((char *)s) - 1;
 	if (s[i] == '\0')
 		return (ft_strdup(""));
 	while (s[slen] == '\t' || s[slen] == '\n' || s[slen] == ' ')
