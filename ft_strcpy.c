@@ -6,11 +6,15 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 15:16:30 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/21 15:43:55 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:36:08 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**ft_strcpy copy the string src to dst including the terminating `\0'
+*/
 
 char	*ft_strcpy(char *dst, const char *src)
 {

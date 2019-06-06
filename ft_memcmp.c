@@ -6,12 +6,16 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:56:31 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 16:34:23 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:20:07 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+/*
+**ft_memcmp function compares byte string s1 against byte string s2.
+**Both strings are assumed to be n bytes long
+*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

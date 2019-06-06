@@ -6,11 +6,15 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 15:50:54 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/04 12:55:40 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:52:41 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**ft_strcmp lexicographically compare the null-terminated strings s1 and s2.
+*/
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

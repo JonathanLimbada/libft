@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-**Allocates with mallocand returns an array of “fresh
+**Allocates with malloc and returns an array of “fresh
 **strings all ending with ’\0’, including the array itself
 **obtained by spliting s using the character c as a delimiter.
 **If the allocation fails the function returns NULL
