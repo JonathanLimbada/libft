@@ -6,11 +6,17 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:37:33 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/30 16:59:43 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 10:07:38 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Applies the function f to each character of the string given
+**as argument to create a “fresh” new string with malloc
+**resulting from the successive applications of f.
+*/
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

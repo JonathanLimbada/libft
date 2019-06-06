@@ -6,11 +6,16 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 11:43:56 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/05 15:02:57 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 10:16:55 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Lexicographical comparison between s1 and s2. If the 2
+**strings are identical the function returns 1, or 0 otherwise.
+*/
 
 int	ft_strequ(char const *s1, char const *s2)
 {

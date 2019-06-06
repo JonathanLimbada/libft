@@ -6,11 +6,18 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 08:15:10 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/03 09:45:57 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 10:55:13 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Allocates with mallocand returns an array of “fresh
+**strings all ending with ’\0’, including the array itself
+**obtained by spliting s using the character c as a delimiter.
+**If the allocation fails the function returns NULL
+*/
 
 static int	cwrds(char const *str, char delim, int index)
 {

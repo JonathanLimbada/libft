@@ -6,11 +6,15 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:13:53 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/30 10:35:51 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 12:08:00 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Outputs the integer n to the file descriptor fd.
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

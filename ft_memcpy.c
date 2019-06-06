@@ -6,11 +6,15 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:23:50 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/29 09:58:57 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 12:34:08 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**The memcpy function copies n bytes from memory area src to memory area dst.
+*/
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

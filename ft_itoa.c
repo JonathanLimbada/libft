@@ -6,11 +6,18 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:06:14 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/03 15:10:32 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:00:43 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Allocate with mallo and returns a “fresh” string
+**ending with ’\0’ representing the integer n given as argument.
+**Negative numbers must be supported. If the allocation fails,
+**the function returns NULL.
+*/
 
 static int		ft_isneg(int nb)
 {

@@ -6,11 +6,15 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:15:47 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/05/30 10:27:48 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/06 12:03:03 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**Outputs the string s to the file descriptor fd.
+*/
 
 void	ft_putstr_fd(char const *s, int fd)
 {
